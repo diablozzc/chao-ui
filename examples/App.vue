@@ -4,9 +4,6 @@
       alt="Vue logo"
       src="./assets/logo.png"
     >
-    <x-button type="primary">
-      button
-    </x-button>
     <Window
       ref="testWin"
       title="test"
