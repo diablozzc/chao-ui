@@ -83,5 +83,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "main": "lib/win-ui.umd.min.js"
+  "main": "lib/chao-ui.umd.min.js"
 }
