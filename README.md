@@ -1,4 +1,4 @@
-# win-ui
+# chao-ui
 
 ## Project setup
 ```
