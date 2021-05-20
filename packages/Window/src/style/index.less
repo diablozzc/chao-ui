@@ -1,0 +1,167 @@
+@windowBgColor: #1a1f26;
+@windowBorderColor: #151515;
+@windowShadowColor: rgba(0, 0, 0, 0.4);
+
+@titleBarBgColor: #383f49;
+@titleBarTextColor: #666666;
+@titleBarActiveTextColor: #bbbbbb;
+
+@resizeColor: #222933;
+
+.v--modal-block-scroll {
+  overflow: hidden;
+  width: 100vw;
+}
+
+.v-window {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: @windowBgColor;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px -5px @windowShadowColor;
+  border: 1px solid @windowBorderColor;
+  padding: 0;
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+
+  .title-bar {
+    background-color: @titleBarBgColor;
+    text-align: center;
+    font-size: 15px;
+    color: @titleBarTextColor;
+    font-weight: bold;
+    position: relative;
+    height: 22px;
+    border-bottom: 1px solid @windowBorderColor;
+    user-select: none;
+    box-sizing: border-box;
+
+    .title-text {
+      margin-left: 20px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .title-buttons {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+
+      .title-button {
+        width: 45px;
+        height: 22px;
+        text-align: center;
+        line-height: 21px;
+
+        svg {
+          width: 10px;
+          height: 10px;
+          shape-rendering: crispEdges;
+
+          &>path {
+            fill: #777777;
+            transition: all 0.2s;
+          }
+
+          &>line {
+            stroke: #777777;
+            transition: all 0.2s;
+          }
+
+          &>polygon {
+            fill: #777777;
+            transition: all 0.2s;
+          }
+        }
+
+        &:hover {
+          svg {
+            &>path {
+              fill: #FFFFFF;
+            }
+
+            &>line {
+              stroke: #FFFFFF;
+            }
+
+            &>polygon {
+              fill: #FFFFFF !important;
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: transparent;
+      color: @titleBarActiveTextColor;
+    }
+  }
+
+  .window-body {
+    overflow: auto;
+    height: 100%;
+    max-height: 100vh;
+  }
+}
+
+.draggable {
+  cursor: pointer;
+}
+
+.window-fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.window-fullscreen-doing {
+  transition: all 0.2s;
+}
+
+// .window-fade-enter-active,
+// .window-fade-leave-active {
+//   transition: all 0.2s;
+// }
+
+// .window-fade-enter,
+// .window-fade-leave-active {
+//   opacity: 0;
+// }
+
+.vue-modal-resizer {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 0;
+  bottom: 0;
+  /*z-index: 9999999;*/
+  background: transparent;
+  cursor: se-resize;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    background: transparent;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid @resizeColor;
+    border-left: 10px solid transparent;
+  }
+
+  &.clicked {
+    &::after {
+      border-bottom: 10px solid @resizeColor;
+    }
+  }
+}
