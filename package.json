@@ -1,11 +1,11 @@
 {
-  "name": "win-ui",
+  "name": "chao-ui",
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib --name win-ui --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name chao-ui --dest lib packages/index.js"
   },
   "description": "A Web UI component library similar to desktop experience",
   "keywords": [
@@ -19,14 +19,14 @@
     "ui",
     "黑超特攻"
   ],
-  "homepage": "https://github.com/diablozzc/win-ui",
+  "homepage": "https://github.com/diablozzc/chao-ui",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/diablozzc/win-ui/issues"
+    "url": "https://github.com/diablozzc/chao-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:diablozzc/win-ui.git"
+    "url": "git+https://github.com:diablozzc/chao-ui.git"
   },
   "contributors": [
     "diablozzc"
