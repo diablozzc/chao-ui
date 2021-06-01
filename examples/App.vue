@@ -1,27 +1,6 @@
 <template>
   <div id="app">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
-    >
-    <Window
-      ref="testWin"
-      title="test"
-      name="testWin"
-      :delay="0"
-      :draggable="{window:false}"
-      resizable
-      :width="1024"
-      :height="768"
-      :min-width="800"
-      :min-height="600"
-      :start-zindex="5"
-      :start-x="0.5"
-      :start-y="0.5"
-      adaptive
-    >
-      test 1
-    </Window>
+    <router-view />
     <window-container />
   </div>
 </template>
@@ -33,7 +12,7 @@ export default {
   components: {
   },
   mounted () {
-    this.$window.show('testWin')
+
   }
 }
 </script>

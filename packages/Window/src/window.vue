@@ -595,6 +595,7 @@ export default {
    * Removes global listeners
    */
   beforeDestroy () {
+    this.$el.parentNode.removeChild(this.$el)
     Window.event.$off('toggle', this.handleToggleEvent)
     Window.event.$off('linkFromEl', this.handleLinkEvent)
     window.removeEventListener('resize', this.handleWindowResize)
